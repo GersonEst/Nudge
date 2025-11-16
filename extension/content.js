@@ -35,9 +35,9 @@ function showBlockOverlay(endTime) {
   overlay.innerHTML = `
     <div class="think-first-container">
       <h1 class="think-first-title">🧠 Think First</h1>
-      <p class="think-first-subtitle">Take 5 minutes to think before using AI</p>
+      <p class="think-first-subtitle">Take a moment to think before using AI</p>
 
-      <div class="think-first-timer" id="think-first-timer">5:00</div>
+      <div class="think-first-timer" id="think-first-timer">0:10</div>
 
       <div class="think-first-prompt">
         <label class="think-first-prompt-label">Before asking ChatGPT, write down:</label>
@@ -52,11 +52,11 @@ function showBlockOverlay(endTime) {
         id="think-first-notes"
         class="think-first-notes"
         placeholder="Your thoughts here... Take your time to reflect on the problem."
-        rows="8"
+        rows="6"
       ></textarea>
 
       <button id="think-first-continue-btn" class="think-first-btn" disabled>
-        <span id="think-first-btn-text">Continue (5:00)</span>
+        <span id="think-first-btn-text">Continue (0:10)</span>
       </button>
 
       <div class="think-first-footer">

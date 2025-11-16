@@ -1,7 +1,7 @@
 // Background service worker for Think First extension
 
 // Constants
-const BLOCK_DURATION = 5 * 60 * 1000; // 5 minutes in milliseconds
+const BLOCK_DURATION = 10 * 1000; // 10 seconds for testing (change to 5 * 60 * 1000 for production)
 const BLOCKED_URLS = ['chatgpt.com', 'chat.openai.com'];
 
 // Session storage (per-tab tracking)
