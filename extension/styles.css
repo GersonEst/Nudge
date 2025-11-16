@@ -17,6 +17,8 @@
   opacity: 1;
   transition: opacity 0.3s ease;
   animation: fadeIn 0.3s ease;
+  pointer-events: auto; /* Capture all pointer events to block interaction */
+  cursor: not-allowed; /* Show not-allowed cursor */
 }
 
 @keyframes fadeIn {
@@ -40,6 +42,8 @@
   box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
   text-align: center;
   animation: slideUp 0.4s ease;
+  pointer-events: auto; /* Allow interaction with form elements inside */
+  cursor: default; /* Normal cursor inside the container */
 }
 
 @keyframes slideUp {
