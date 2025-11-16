@@ -1,0 +1,270 @@
+/* Think First Extension Styles */
+
+/* Main overlay - full screen blocking */
+#think-first-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  z-index: 2147483647; /* Maximum z-index */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Main container */
+.think-first-container {
+  background: white;
+  border-radius: 24px;
+  padding: 48px;
+  max-width: 650px;
+  width: 90%;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Title */
+.think-first-title {
+  margin: 0 0 12px;
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+}
+
+/* Subtitle */
+.think-first-subtitle {
+  margin: 0 0 24px;
+  font-size: 18px;
+  color: #666;
+  font-weight: 400;
+}
+
+/* Timer display */
+.think-first-timer {
+  font-size: 56px;
+  font-weight: 800;
+  color: #667eea;
+  margin: 24px 0;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 4px rgba(102, 126, 234, 0.2);
+  transition: all 0.3s ease;
+}
+
+.think-first-timer-complete {
+  color: #4caf50;
+  animation: pulse 0.5s ease;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Prompt section */
+.think-first-prompt {
+  text-align: left;
+  margin: 24px 0;
+  padding: 24px;
+  background: linear-gradient(135deg, #f7f9fc 0%, #eef2f7 100%);
+  border-radius: 16px;
+  border: 1px solid #e0e7ef;
+}
+
+.think-first-prompt-label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.think-first-prompt-list {
+  margin: 0;
+  padding-left: 24px;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.think-first-prompt-list li {
+  margin: 8px 0;
+}
+
+/* Notes textarea */
+.think-first-notes {
+  width: 100%;
+  padding: 18px;
+  border: 2px solid #e0e7ef;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: inherit;
+  resize: vertical;
+  margin: 24px 0;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  line-height: 1.6;
+  color: #333;
+  min-height: 160px;
+}
+
+.think-first-notes:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.think-first-notes::placeholder {
+  color: #999;
+}
+
+/* Continue button */
+.think-first-btn {
+  background: #ccc;
+  color: white;
+  border: none;
+  padding: 18px 48px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: not-allowed;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.think-first-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.think-first-btn-enabled {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  cursor: pointer;
+  animation: buttonReady 0.5s ease;
+}
+
+@keyframes buttonReady {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.think-first-btn-enabled:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.think-first-btn-enabled:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Footer */
+.think-first-footer {
+  margin-top: 24px;
+  font-size: 14px;
+  color: #999;
+  font-style: italic;
+}
+
+/* Toast notification */
+.think-first-toast {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: #4caf50;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  z-index: 2147483647;
+  animation: slideInRight 0.3s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  max-width: 400px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .think-first-container {
+    padding: 32px 24px;
+    width: 95%;
+  }
+
+  .think-first-title {
+    font-size: 32px;
+  }
+
+  .think-first-timer {
+    font-size: 48px;
+  }
+
+  .think-first-btn {
+    padding: 16px 32px;
+    font-size: 16px;
+  }
+
+  .think-first-toast {
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+    max-width: none;
+  }
+}
